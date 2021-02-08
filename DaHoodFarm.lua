@@ -78,5 +78,5 @@ local Target = gettarget()
             end
         end
     end
-    wait(.3)
+    wait(1)
 end
