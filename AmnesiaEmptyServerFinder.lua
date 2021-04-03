@@ -15,7 +15,7 @@ local goodserver;
 local gamelink = "https://games.roblox.com/v1/games/" .. game.PlaceId .. "/servers/Public?sortOrder=Asc&limit=100"
 
 function serversearch()
-    for _, v in ipairs(game:GetService("HttpService"):JSONDecode(game:HttpGetAsync(gamelink)).data) do
+    for _, v in pairs(game:GetService("HttpService"):JSONDecode(game:HttpGetAsync(gamelink)).data) do
         if type(v) == "table" and maxplayers > v.playing then
             serversmaxplayer = v.maxPlayers
             maxplayers = v.playing
